@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+    <title>StayDine - {{ title }}</title>
+    {% else %}
+    <title>StayDine</title>
+    {% endif %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/events.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        Event Bookings
+    </div>
+    <div class="event-section">
+        <h2>Christmas Event</h2>
+        <div class="event-list">
+            <div class="event-card">
+                <h3>Event ID: 1</h3>
+                <p>Event Name: Christmas</p>
+                <p>Price: ₹50,000</p>
+                <p>Max Guests: 100</p>
+            </div>
+        </div>
+    </div>
+    <div class="event-section">
+        <h2>Easter Event</h2>
+        <div class="event-list">
+            <div class="event-card">
+                <h3>Event ID: 2</h3>
+                <p>Event Name: Easter</p>
+                <p>Price: ₹40,000</p>
+                <p>Max Guests: 80</p>
+            </div>
+        </div>
+    </div>
+    <div class="event-section">
+        <h2>Good Friday Event</h2>
+        <div class="event-list">
+            <div class="event-card">
+                <h3>Event ID: 3</h3>
+                <p>Event Name: Good Friday</p>
+                <p>Price: ₹30,000</p>
+                <p>Max Guests: 50</p>
+            </div>
+        </div>
+    </div>
+    <div class="event-section">
+        <h2>New Year Event</h2>
+        <div class="event-list">
+            <div class="event-card">
+                <h3>Event ID: 4</h3>
+                <p>Event Name: New Year</p>
+                <p>Price: ₹60,000</p>
+                <p>Max Guests: 150</p>
+            </div>
+        </div>
+    </div>
+    <div class="event-section">
+        <h2>Valentine's Day Event</h2>
+        <div class="event-list">
+            <div class="event-card">
+                <h3>Event ID: 5</h3>
+                <p>Event Name: Valentine's Day</p>
+                <p>Price: ₹45,000</p>
+                <p>Max Guests: 70</p>
+            </div>
+        </div>
+    </div>
+    <div class="event-section">
+        <h2>Halloween Event</h2>
+        <div class="event-list">
+            <div class="event-card">
+                <h3>Event ID: 6</h3>
+                <p>Event Name: Halloween</p>
+                <p>Price: ₹35,000</p>
+                <p>Max Guests: 60</p>
+            </div>
+        </div>
+    </div>
+    <div class="event-section">
+        <h2>Thanksgiving Event</h2>
+        <div class="event-list">
+            <div class="event-card">
+                <h3>Event ID: 7</h3>
+                <p>Event Name: Thanksgiving</p>
+                <p>Price: ₹55,000</p>
+                <p>Max Guests: 120</p>
+            </div>
+        </div>
+    </div>
+    <div class="event-section">
+        <h2>Diwali Event</h2>
+        <div class="event-list">
+            <div class="event-card">
+                <h3>Event ID: 8</h3>
+                <p>Event Name: Diwali</p>
+                <p>Price: ₹50,000</p>
+                <p>Max Guests: 100</p>
+            </div>
+        </div>
+    </div>
+    <div class="event-section">
+        <h2>Hanukkah Event</h2>
+        <div class="event-list">
+            <div class="event-card">
+                <h3>Event ID: 9</h3>
+                <p>Event Name: Hanukkah</p>
+                <p>Price: ₹45,000</p>
+                <p>Max Guests: 80</p>
+            </div>
+        </div>
+    </div>
+    <div class="event-section">
+        <h2>Eid Event</h2>
+        <div class="event-list">
+            <div class="event-card">
+                <h3>Event ID: 10</h3>
+                <p>Event Name: Eid</p>
+                <p>Price: ₹50,000</p>
+                <p>Max Guests: 90</p>
+            </div>
+        </div>
+    </div>
+    <div class="notice">
+        * Event bookings must be confirmed at least two weeks in advance!
+    </div>
+</body>
+
+</html>

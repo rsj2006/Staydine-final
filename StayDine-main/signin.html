@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile OTP Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        #otpSection {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Mobile OTP Verification</h2>
+
+        <!-- Section for entering mobile number -->
+        <form id="otpForm">
+            <input type="text" id="mobileNumber" name="mobileNumber" placeholder="Enter Mobile No" required pattern="[0-9]{10}">
+            <input type="submit" value="Get OTP">
+        </form>
+
+        <p id="otpMessage" style="color: green; display: none;">OTP has been sent!</p>
+
+        <!-- Section for entering OTP -->
+        <div id="otpSection">
+            <form id="verifyOtpForm">
+                <input type="text" id="otpInput" name="otp" placeholder="Enter OTP" required pattern="[0-9]{6}">
+                <input type="submit" value="Verify OTP">
+            </form>
+            <p id="otpSuccessMessage" style="color: green; display: none;">OTP verified successfully!</p>
+            <p id="otpErrorMessage" style="color: red; display: none;">Invalid OTP. Please try again.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('otpForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const mobileNumber = document.getElementById('mobileNumber').value;
+            
+            if(mobileNumber.length === 10) {
+                // Send the mobile number to the backend to generate and send the OTP
+                document.getElementById('otpMessage').style.display = 'block';
+                document.getElementById('otpSection').style.display = 'block'; // Show OTP section
+            } else {
+                alert('Please enter a valid 10-digit mobile number.');
+            }
+        });
+
+        document.getElementById('verifyOtpForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const otpInput = document.getElementById('otpInput').value;
+            
+            // Ideally, here you'd validate the OTP with your backend
+            if(otpInput === "123456") { // Replace "123456" with actual OTP validation logic
+                document.getElementById('otpSuccessMessage').style.display = 'block';
+                document.getElementById('otpErrorMessage').style.display = 'none';
+            } else {
+                document.getElementById('otpErrorMessage').style.display = 'block';
+                document.getElementById('otpSuccessMessage').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "staydine/base.html" %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="card p-4 shadow-lg rounded">
+        <h2 class="text-success text-center">Booking Confirmed!</h2>
+        <hr>
+        <p>Classic Rooms: {{ classic_rooms }}</p>
+        <p>Premium Rooms: {{ premium_rooms }}</p>
+        <p>Royal Suites: {{ suite_rooms }}</p>
+        <p><strong>Total Amount:</strong> ₹ {{ total_amount }}</p>
+        <p class="text-info"><strong>Please pay the above amount at the reception.</strong></p>
+        <div class="text-center">
+            <a href="{% url 'staydine-room-bookings' %}" class="btn btn-primary mt-3">Book Another Room</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

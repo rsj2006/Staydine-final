@@ -1,0 +1,101 @@
+body {
+    /* background-color: #FABC3F; */
+    background-image: url('https://thearchitectsdiary.com/wp-content/uploads/2018/06/Best-Restaurant-Interior-Design-In-India-3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registration {
+    border: none;
+    /* height: 59vh; */
+    width: 48vw;
+    border-radius: 37px;
+    background-color: #fabc3f;
+}
+
+.logo {
+    margin: 10px;
+    text-align: center;
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+
+.slogan {
+    text-align: center;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.pleaselogin {
+    font-weight: 500;
+    margin: 10px;
+}
+
+.login {
+    margin: 22px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputBox {
+    width: 400px;
+    height: 40px;
+    border-radius: 37px;
+    border: none;
+    -webkit-box-shadow: 10px 10px 44px -12px rgba(0, 0, 0, 0.61);
+    -moz-box-shadow: 10px 10px 44px -12px rgba(0, 0, 0, 0.61);
+    box-shadow: 10px 10px 44px -12px rgba(0, 0, 0, 0.61);
+    font-size: 15px;
+    padding-left: 17px;
+}
+
+button {
+    margin: 10px;
+    padding: 2px;
+    height: 35px;
+    width: 94px;
+    border: none;
+    border-radius: 37px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+span {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 110px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+.socials svg {
+    height: 53px;
+    width: 28px;
+}
+
+svg:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,20 @@
+{% extends "staydine/base.html" %}
+
+{% block content %}
+<div class="text-center mb-4">
+    <h2>Payment Instructions</h2>
+</div>
+
+<div class="translucent-bg p-3 mx-auto" style="max-width: 500px;">
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Item No:</strong> {{ item_no }}</p>
+    <p><strong>Quantity:</strong> {{ quantity }}</p>
+    <hr>
+    <p class="total-amount"><strong>Total Amount to Pay:</strong> ₹ {{ amount|floatformat:2 }}</p>
+
+    <div class="mt-4">
+        <p>Please pay this amount via UPI/Wallet/Cash at the hotel.</p>
+        <!-- You could show a static QR code here if needed -->
+    </div>
+</div>
+{% endblock %}

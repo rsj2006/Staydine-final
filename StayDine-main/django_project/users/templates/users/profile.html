@@ -1,0 +1,51 @@
+{% extends "staydine/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('https://imgs.search.brave.com/jNJOFV_Z8gRkeP01BlnyV3e_df7lvpPnL4cCCW7Mdmo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTA3/NzExMTYwNi9waG90/by9sdXh1cnktZml2/ZS1zdGFycy1ob3Rl/bHMtbG9iYnkuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPW13/cGVTYUJXVHJlMldF/R0dkNHViTFFWQlJW/YWxTbDQwZzRrczA0/bktqbkk9');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        padding: 50px;
+    }
+</style>
+<div class="container mt-5">
+    <h1 class="text-center text-dark">Profile</h1>
+    <h1 class="text-center text-dark">You can't update email</h1>
+
+    <div class="card mt-3 contact-card translucent-bg">
+        <div class="card-body">
+            <div class="media mb-4">
+                <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" alt="User Image">
+                <div class="media-body">
+                    <h2 class="account-heading">{{ user.username }}</h2>
+                    <p class="text-muted">{{ user.email }}</p>
+                </div>
+            </div>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">Profile Info</legend>
+                    {{ u_form|crispy }}
+                    {{ p_form|crispy }}
+                </fieldset>
+                <div class="form-group">
+                    <button class="btn btn-outline-info" type="submit">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<form method="POST" action="{% url 'delete_account' %}">
+    {% csrf_token %}
+    <button class="btn btn-danger btn-sm" type="submit">Delete Account</button>
+</form>
+<div class="mt-3 text-end">
+    <a href="{% url 'change_password' %}" class="btn btn-warning">Change Password</a>
+</div>
+
+
+{% endblock content %}

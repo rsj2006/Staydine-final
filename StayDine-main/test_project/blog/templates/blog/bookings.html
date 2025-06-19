@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+    <title>StayDine - {{ title }}</title>
+    {% else %}
+    <title>StayDine</title>
+    {% endif %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/bookings.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap');
+    </style>
+</head>
+<body>
+    <div class="header">
+        Room Bookings
+    </div>
+    <div class="room-section">
+        <h2>PentHouse Suites</h2>
+        <div class="room-list">
+            <div class="room-card">
+                <h3>Room </h3>
+                <p>Type: PentHouse</p>
+                <p>Bed Type: California King</p>
+                <p>Price per Night: ₹7000</p>
+                <p>Max Occupants: 10</p>
+            </div>
+            <div class="room-card">
+                <h3>Room </h3>
+                <p>Type: PentHouse</p>
+                <p>Bed Type: California King</p>
+                <p>Price per Night: ₹5000</p>
+                <p>Max Occupants: 6</p>
+            </div>
+        </div>
+    </div>
+    <div class="room-section">
+        <h2>Presidential Suites</h2>
+        <div class="room-list">
+            <div class="room-card">
+                <h3>Room </h3>
+                <p>Type: Presidential Suite</p>
+                <p>Bed Type: King</p>
+                <p>Price per Night: ₹4000</p>
+                <p>Max Occupants: 6</p>
+            </div>
+            <div class="room-card">
+                <h3>Room</h3>
+                <p>Type: Presidential Suite</p>
+                <p>Bed Type: King</p>
+                <p>Price per Night: ₹4000</p>
+                <p>Max Occupants: 6</p>
+            </div>
+        </div>
+    </div>
+    <div class="room-section">
+        <h2>Superior Suites</h2>
+        <div class="room-list">
+            <div class="room-card">
+                <h3>Room</h3>
+                <p>Type: Superior Suite</p>
+                <p>Bed Type: Queen</p>
+                <p>Price per Night: ₹2300</p>
+                <p>Max Occupants: 6</p>
+            </div>
+            <div class="room-card">
+                <h3>Room</h3>
+                <p>Type: Superior Suite</p>
+                <p>Bed Type: Queen</p>
+                <p>Price per Night: ₹2300</p>
+                <p>Max Occupants: 6</p>
+            </div>
+        </div>
+    </div>
+    <div class="room-section">
+        <h2>Deluxe Suites</h2>
+        <div class="room-list">
+            <div class="room-card">
+                <h3>Room</h3>
+                <p>Type: Deluxe Suite</p>
+                <p>Bed Type: Double</p>
+                <p>Price per Night: ₹1900</p>
+                <p>Max Occupants: 6</p>
+            </div>
+            <div class="room-card">
+                <h3>Room</h3>
+                <p>Type: Deluxe Suite</p>
+                <p>Bed Type: Double</p>
+                <p>Price per Night: ₹1900</p>
+                <p>Max Occupants: 6</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="notice">
+        * Food can be booked in this section if you are staying!
+    </div>
+</body>
+</html>

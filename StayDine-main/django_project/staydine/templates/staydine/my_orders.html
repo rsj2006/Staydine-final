@@ -1,0 +1,36 @@
+{% extends "staydine/base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center">My Orders</h2>
+    <hr>
+
+    {% if bookings %}
+        <div class="row">
+            {% for booking in bookings %}
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm p-3">
+                        <p>Classic Rooms: {{ booking.classic_rooms }}</p>
+                        <p>Premium Rooms: {{ booking.premium_rooms }}</p>
+                        <p>Royal Suites: {{ booking.suite_rooms }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Show delete button only when bookings exist -->
+        <form method="POST" action="{% url 'delete-order' %}" onsubmit="return confirm('Are you sure you want to delete your booking?');">
+            {% csrf_token %}
+            <div class="text-center">
+                <button class="btn btn-danger btn-sm">Delete</button>
+            </div>
+        </form>
+    {% else %}
+        <p class="text-center">You have no bookings yet.</p>
+    {% endif %}
+
+    <div class="text-center mt-4">
+        <a href="{% url 'staydine-home' %}" class="btn btn-dark">Back to Home</a>
+    </div>
+</div>
+{% endblock %}

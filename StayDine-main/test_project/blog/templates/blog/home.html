@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+    <title>StayDine - {{ title }}</title>
+    {% else %}
+    <title>StayDine</title>
+    {% endif %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/home.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo">StayDine</li>
+                <span>
+                    <a href="{% url 'blog-bookings' %}">Room Bookings</a>
+                    <a href="{% url 'blog-menu' %}">Menu</a>
+                    <a href="{% url 'blog-tables' %}">Table Reservations</a>
+                    <a href="{% url 'blog-events' %}">Private Events</a>
+                    <a href="{% url 'blog-about' %}">Our Story</a>
+                </span>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="hugeslogan">
+                StayDine. <br> Where Comfort Meets <br> Culinary Delight!
+            </div>
+            <img src="https://static.vecteezy.com/system/resources/previews/028/195/647/original/beef-wellington-with-ai-generated-free-png.png" alt="">
+            <div class="smallslogan">
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

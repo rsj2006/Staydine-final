@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% if title %}
+    <title>StayDine - {{ title }}</title>
+    {% else %}
+    <title>StayDine</title>
+    {% endif %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/about.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>About Us</h1>
+        <p>Welcome to our website "StayDine" Where Comfort Meets Culinary Delights!<br>We are dedicated to providing you
+            with the best service possible.</p>
+        <p>We are passionate about what we do, and we strive for excellence in every project.</p>
+
+        <h2>The Founders</h2>
+        <p><strong>Founder 1:</strong> Shaik Masthan Jilani<br> This is my first project on making a website, and am
+            very excited about it.<br>StayDine is our dream project, although there isn't much to show about this
+            frontend portion,<br>but would definitely work hard to make this website attractive and use all the features
+            necessary. Thank you!</p>
+        <p><strong>Founder 2:</strong> Sohel<br> Hi, I am a student from IIT(BHU) Varanasi, pursuing BTech in
+            CSE,<br>and am happy to have such a wonderful oppurtunity to make this project!</p>
+
+        <p>Thank you for visiting us, and we look forward to make this site better with your help!</p>
+    </div>
+
+</body>
+
+</html>

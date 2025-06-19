@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+    <title>StayDine - {{ title }}</title>
+    {% else %}
+    <title>StayDine</title>
+    {% endif %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/tables.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>StayDine Table Reservations</h1>
+</header>
+
+<div class="container">
+    <h2>Reserve a Table</h2>
+    <form action="/reserve" method="POST">
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" name="date" required>
+        
+        <label for="time">Select Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="tableSize">Table Size:</label>
+        <select id="tableSize" name="tableSize" required>
+            <option value="2">Table for 2</option>
+            <option value="4">Table for 4</option>
+            <option value="8">Table for 8</option>
+        </select>
+
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <input type="submit" value="Reserve Now">
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2024 StayDine. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
