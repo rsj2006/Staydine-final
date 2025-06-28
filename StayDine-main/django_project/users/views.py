@@ -33,9 +33,7 @@ def register(request):
     
     return render(request, 'users/register.html', {'form': form, 'title': 'Registration'})
 
-# def logout_view(request):
-#     logout(request)
-#     return render(request, 'users/logout.html')
+
 
 @login_required
 def profile(request):
@@ -165,8 +163,8 @@ def initiate_payment(request):
 def delete_account(request):
     if request.method == 'POST':
         user = request.user
-        logout(request)  # Logs out the user
-        user.delete()    # Deletes the user
+        logout(request)  
+        user.delete()    
         messages.success(request, 'Your account has been deleted.')
         return redirect('login')  # Redirect to homepage or login
 
