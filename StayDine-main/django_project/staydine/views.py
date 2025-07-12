@@ -41,7 +41,7 @@ def bed_types(request):
 
 @login_required(login_url='login')
 def my_orders(request):
-    bookings = Accommodation.objects.filter(email=request.user.email).order_by('-start_date')
+    bookings = Accommodation.objects.filter(email=request.user.email)
     return render(request, 'staydine/my_orders.html', {
         'bookings': bookings,
         'title': 'My Orders'
