@@ -129,7 +129,7 @@ def bookings(request):
             suite * price_map["Suite"]
         ) * nights
 
-        # Save or update booking (since email is PK)
+        
         Accommodation.objects.update_or_create(
             email=email,
             defaults={
