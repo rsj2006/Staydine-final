@@ -74,7 +74,7 @@ def change_password(request):
 @login_required
 def email_redirect_view(request):
     messages.error(request, "You can't access the email management page.")
-    return redirect('staydine-home')  # Replace 'home' with your home page URL name    
+    return redirect('staydine-home')   
 
 # stripe.api_key = settings.STRIPE_SECRET_KEY
 
