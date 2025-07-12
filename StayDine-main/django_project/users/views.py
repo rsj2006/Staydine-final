@@ -76,7 +76,6 @@ def email_redirect_view(request):
     messages.error(request, "You can't access the email management page.")
     return redirect('staydine-home')   
 
-# stripe.api_key = settings.STRIPE_SECRET_KEY
 
 @login_required
 def initiate_payment(request):
@@ -166,7 +165,7 @@ def delete_account(request):
         logout(request)  
         user.delete()    
         messages.success(request, 'Your account has been deleted.')
-        return redirect('login')  # Redirect to homepage or login
+        return redirect('login') 
 
 def payment_success(request):
     transaction_id = request.GET.get('transaction_id')
