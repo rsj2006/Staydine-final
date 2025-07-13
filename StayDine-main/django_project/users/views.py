@@ -149,8 +149,8 @@ def initiate_payment(request):
 #             # Signature verification
 #             client.utility.verify_payment_signature(params_dict)
 
-#             # ✅ Save payment info or mark as paid in your DB
-#             # Payment.objects.create(...)  # optional
+#            
+#             # Payment.objects.create(...)  
 
 #             return JsonResponse({'status': 'success'})
 #         except errors.SignatureVerificationError:
